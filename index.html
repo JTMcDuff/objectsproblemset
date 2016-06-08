@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+<script>
+function getValues(obj) {
+var arr=[];
+for (val in obj) {
+arr.push(obj[val]);
+}
+return arr;
+}
+
+var employee={
+name:"Johnny McDuff",
+Postion:"Developer",
+Age:"33",
+}
+
+var user={
+name:"Zod",
+age:1000,
+}
+
+function keysthenVals(obj){
+var objArr = Object.keys(obj);
+
+for (val in obj) {
+objArr.push(obj[val]);
+}
+return objArr
+}
+
+var arr1=["name","age","position"];
+function matchArray(obj,arr){
+var check=1;
+var prop=Object.keys(obj);
+for (i=0; i<arr.length; i++){
+if (prop.indexOf(arr[i])==-1) {check--;}
+}
+if (check>0) {return true;}
+else return false;
+}
+</script>
+
+</body>
+
+</html>
